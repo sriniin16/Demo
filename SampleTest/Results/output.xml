@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.7.2 on win32)" generated="20190319 12:37:24.595" rpa="false">
+<suite id="s1" name="Suite level run" source="C:\Users\ksrinivasan\PycharmProjects\SampleTest\Tests">
+<suite id="s1-s1" name="Amazon" source="C:\Users\ksrinivasan\PycharmProjects\SampleTest\Tests\Amazon.robot">
+<test id="s1-s1-t1" name="Search for a product in amazon and display the model prices">
+<kw name="Open a new browser and navigate to URL" library="Setup" type="setup">
+<doc>To open a new browser instance and navigate to a specified URL</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:24.806" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.in/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190319 12:37:24.808" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20190319 12:37:24.808" endtime="20190319 12:37:24.808"></status>
+</kw>
+<msg timestamp="20190319 12:37:24.811" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</msg>
+<status status="FAIL" starttime="20190319 12:37:24.806" endtime="20190319 12:37:24.811"></status>
+</kw>
+<status status="FAIL" starttime="20190319 12:37:24.805" endtime="20190319 12:37:24.811"></status>
+</kw>
+<kw name="close the current browser" library="Teardown" type="teardown">
+<doc>Close the current browser window</doc>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>closing the browser</arg>
+</arguments>
+<msg timestamp="20190319 12:37:24.812" level="INFO">closing the browser</msg>
+<status status="PASS" starttime="20190319 12:37:24.812" endtime="20190319 12:37:24.812"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190319 12:37:24.812" endtime="20190319 12:37:24.813"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:24.812" endtime="20190319 12:37:24.813"></status>
+</kw>
+<doc>Search for a product and view the product prices in ascending order</doc>
+<tags>
+<tag>test</tag>
+</tags>
+<status status="FAIL" starttime="20190319 12:37:24.804" endtime="20190319 12:37:24.813" critical="yes">Setup failed:
+WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</status>
+</test>
+<doc>To search a product and display the list of prices</doc>
+<status status="FAIL" starttime="20190319 12:37:24.624" endtime="20190319 12:37:24.814"></status>
+</suite>
+<suite id="s1-s2" name="Builtin" source="C:\Users\ksrinivasan\PycharmProjects\SampleTest\Tests\Builtin.robot">
+<test id="s1-s2-t1" name="Declare and set variables">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>this variable is set in declare and set variables keyword</arg>
+</arguments>
+<assign>
+<var>${sample_test_data}</var>
+</assign>
+<msg timestamp="20190319 12:37:24.837" level="INFO">${sample_test_data} = this variable is set in declare and set variables keyword</msg>
+<status status="PASS" starttime="20190319 12:37:24.837" endtime="20190319 12:37:24.837"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${set_another_sample_test_data}</arg>
+<arg>this is a test variable set</arg>
+</arguments>
+<msg timestamp="20190319 12:37:24.838" level="INFO">${set_another_sample_test_data} = this is a test variable set</msg>
+<status status="PASS" starttime="20190319 12:37:24.837" endtime="20190319 12:37:24.838"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${set_suite_variable}</arg>
+<arg>this is a suite variable set</arg>
+</arguments>
+<msg timestamp="20190319 12:37:24.839" level="INFO">${set_suite_variable} = this is a suite variable set</msg>
+<status status="PASS" starttime="20190319 12:37:24.838" endtime="20190319 12:37:24.839"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${SET_GLOBAL_VARIABLE}</arg>
+<arg>this is a global variable set</arg>
+</arguments>
+<msg timestamp="20190319 12:37:24.840" level="INFO">${SET_GLOBAL_VARIABLE} = this is a global variable set</msg>
+<status status="PASS" starttime="20190319 12:37:24.839" endtime="20190319 12:37:24.840"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:24.836" endtime="20190319 12:37:24.841" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Logging library keyword samples">
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${GLOBAL_VARIABLE1}</arg>
+</arguments>
+<status status="PASS" starttime="20190319 12:37:24.842" endtime="20190319 12:37:24.842"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>this is a random string comment</arg>
+</arguments>
+<status status="PASS" starttime="20190319 12:37:24.842" endtime="20190319 12:37:24.842"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>this is a random string log</arg>
+</arguments>
+<msg timestamp="20190319 12:37:24.843" level="INFO">this is a random string log</msg>
+<status status="PASS" starttime="20190319 12:37:24.843" endtime="20190319 12:37:24.843"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>log1</arg>
+<arg>log2</arg>
+<arg>log3</arg>
+<arg>log4</arg>
+</arguments>
+<msg timestamp="20190319 12:37:24.843" level="INFO">log1</msg>
+<msg timestamp="20190319 12:37:24.843" level="INFO">log2</msg>
+<msg timestamp="20190319 12:37:24.844" level="INFO">log3</msg>
+<msg timestamp="20190319 12:37:24.844" level="INFO">log4</msg>
+<status status="PASS" starttime="20190319 12:37:24.843" endtime="20190319 12:37:24.844"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>this log can be seen only in console</arg>
+</arguments>
+<status status="PASS" starttime="20190319 12:37:24.844" endtime="20190319 12:37:24.844"></status>
+</kw>
+<kw name="Log Variables" library="BuiltIn">
+<doc>Logs all variables in the current scope with given log level.</doc>
+<msg timestamp="20190319 12:37:24.845" level="INFO">${/} = \</msg>
+<msg timestamp="20190319 12:37:24.845" level="INFO">${:} = ;</msg>
+<msg timestamp="20190319 12:37:24.845" level="INFO">${\n} = 
+</msg>
+<msg timestamp="20190319 12:37:24.845" level="INFO">${DEBUG_FILE} = NONE</msg>
+<msg timestamp="20190319 12:37:24.845" level="INFO">${EXECDIR} = C:\Users\ksrinivasan\PycharmProjects\SampleTest</msg>
+<msg timestamp="20190319 12:37:24.845" level="INFO">${False} = False</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${GLOBAL_VARIABLE1} = this is a global vairable</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${LOG_FILE} = C:\Users\ksrinivasan\PycharmProjects\SampleTest\results\log.html</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${LOG_LEVEL} = INFO</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${None} = None</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${null} = None</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${OUTPUT_DIR} = C:\Users\ksrinivasan\PycharmProjects\SampleTest\results</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${OUTPUT_FILE} = C:\Users\ksrinivasan\PycharmProjects\SampleTest\results\output.xml</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${PREV_TEST_MESSAGE} = </msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${PREV_TEST_NAME} = Declare and set variables</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${PREV_TEST_STATUS} = PASS</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${REPORT_FILE} = C:\Users\ksrinivasan\PycharmProjects\SampleTest\results\report.html</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${SET_GLOBAL_VARIABLE} = this is a global variable set</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${set_suite_variable} = this is a suite variable set</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${SPACE} =  </msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${SUITE_DOCUMENTATION} = this is a test for builtin libraries</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">&amp;{SUITE_METADATA} = { }</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${SUITE_NAME} = Suite level run.Builtin</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${SUITE_SOURCE} = C:\Users\ksrinivasan\PycharmProjects\SampleTest\Tests\Builtin.robot</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${TEMPDIR} = C:\Users\KSRINI~1\AppData\Local\Temp</msg>
+<msg timestamp="20190319 12:37:24.846" level="INFO">${TEST_DOCUMENTATION} = </msg>
+<msg timestamp="20190319 12:37:24.847" level="INFO">${TEST_NAME} = Logging library keyword samples</msg>
+<msg timestamp="20190319 12:37:24.847" level="INFO">@{TEST_TAGS} = [ ]</msg>
+<msg timestamp="20190319 12:37:24.847" level="INFO">${True} = True</msg>
+<status status="PASS" starttime="20190319 12:37:24.844" endtime="20190319 12:37:24.847"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:24.841" endtime="20190319 12:37:24.847" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="repeating the keywords">
+<kw name="Pause Execution" library="Dialogs">
+<doc>Pauses test execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" starttime="20190319 12:37:24.848" endtime="20190319 12:37:26.573"></status>
+</kw>
+<kw name="Repeat Keyword" library="BuiltIn">
+<doc>Executes the specified keyword multiple times.</doc>
+<arguments>
+<arg>10 Times</arg>
+<arg>something</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.574" level="INFO">Repeating keyword, round 1/10.</msg>
+<kw name="something">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>this is a keyword to repeat</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.574" level="INFO">this is a keyword to repeat</msg>
+<status status="PASS" starttime="20190319 12:37:26.574" endtime="20190319 12:37:26.574"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.574" endtime="20190319 12:37:26.574"></status>
+</kw>
+<msg timestamp="20190319 12:37:26.574" level="INFO">Repeating keyword, round 2/10.</msg>
+<kw name="something">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>this is a keyword to repeat</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.575" level="INFO">this is a keyword to repeat</msg>
+<status status="PASS" starttime="20190319 12:37:26.575" endtime="20190319 12:37:26.576"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.575" endtime="20190319 12:37:26.576"></status>
+</kw>
+<msg timestamp="20190319 12:37:26.576" level="INFO">Repeating keyword, round 3/10.</msg>
+<kw name="something">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>this is a keyword to repeat</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.576" level="INFO">this is a keyword to repeat</msg>
+<status status="PASS" starttime="20190319 12:37:26.576" endtime="20190319 12:37:26.577"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.576" endtime="20190319 12:37:26.577"></status>
+</kw>
+<msg timestamp="20190319 12:37:26.577" level="INFO">Repeating keyword, round 4/10.</msg>
+<kw name="something">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>this is a keyword to repeat</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.577" level="INFO">this is a keyword to repeat</msg>
+<status status="PASS" starttime="20190319 12:37:26.577" endtime="20190319 12:37:26.577"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.577" endtime="20190319 12:37:26.577"></status>
+</kw>
+<msg timestamp="20190319 12:37:26.577" level="INFO">Repeating keyword, round 5/10.</msg>
+<kw name="something">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>this is a keyword to repeat</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.578" level="INFO">this is a keyword to repeat</msg>
+<status status="PASS" starttime="20190319 12:37:26.578" endtime="20190319 12:37:26.578"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.577" endtime="20190319 12:37:26.578"></status>
+</kw>
+<msg timestamp="20190319 12:37:26.578" level="INFO">Repeating keyword, round 6/10.</msg>
+<kw name="something">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>this is a keyword to repeat</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.578" level="INFO">this is a keyword to repeat</msg>
+<status status="PASS" starttime="20190319 12:37:26.578" endtime="20190319 12:37:26.578"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.578" endtime="20190319 12:37:26.579"></status>
+</kw>
+<msg timestamp="20190319 12:37:26.579" level="INFO">Repeating keyword, round 7/10.</msg>
+<kw name="something">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>this is a keyword to repeat</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.579" level="INFO">this is a keyword to repeat</msg>
+<status status="PASS" starttime="20190319 12:37:26.579" endtime="20190319 12:37:26.579"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.579" endtime="20190319 12:37:26.579"></status>
+</kw>
+<msg timestamp="20190319 12:37:26.579" level="INFO">Repeating keyword, round 8/10.</msg>
+<kw name="something">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>this is a keyword to repeat</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.580" level="INFO">this is a keyword to repeat</msg>
+<status status="PASS" starttime="20190319 12:37:26.580" endtime="20190319 12:37:26.580"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.579" endtime="20190319 12:37:26.580"></status>
+</kw>
+<msg timestamp="20190319 12:37:26.580" level="INFO">Repeating keyword, round 9/10.</msg>
+<kw name="something">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>this is a keyword to repeat</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.580" level="INFO">this is a keyword to repeat</msg>
+<status status="PASS" starttime="20190319 12:37:26.580" endtime="20190319 12:37:26.581"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.580" endtime="20190319 12:37:26.581"></status>
+</kw>
+<msg timestamp="20190319 12:37:26.581" level="INFO">Repeating keyword, round 10/10.</msg>
+<kw name="something">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>this is a keyword to repeat</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.581" level="INFO">this is a keyword to repeat</msg>
+<status status="PASS" starttime="20190319 12:37:26.581" endtime="20190319 12:37:26.581"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.581" endtime="20190319 12:37:26.581"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.573" endtime="20190319 12:37:26.581"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:24.848" endtime="20190319 12:37:26.582" critical="yes"></status>
+</test>
+<doc>this is a test for builtin libraries</doc>
+<status status="PASS" starttime="20190319 12:37:24.815" endtime="20190319 12:37:26.584"></status>
+</suite>
+<suite id="s1-s3" name="Operating System" source="C:\Users\ksrinivasan\PycharmProjects\SampleTest\Tests\operating_system.robot">
+<test id="s1-s3-t1" name="create directories">
+<kw name="create a base directory" library="os">
+<kw name="Create Directory" library="OperatingSystem">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.612" level="INFO" html="yes">Directory '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.612" endtime="20190319 12:37:26.613"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.613" level="INFO" html="yes">Path '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.613" endtime="20190319 12:37:26.613"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The created directory exists</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.613" level="INFO">The created directory exists</msg>
+<status status="PASS" starttime="20190319 12:37:26.613" endtime="20190319 12:37:26.613"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.612" endtime="20190319 12:37:26.614"></status>
+</kw>
+<kw name="create directory 1" library="os">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory1}</arg>
+</arguments>
+<assign>
+<var>${directory_path}</var>
+</assign>
+<msg timestamp="20190319 12:37:26.615" level="INFO">${directory_path} = Outputs\first directory</msg>
+<status status="PASS" starttime="20190319 12:37:26.614" endtime="20190319 12:37:26.615"></status>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.615" level="INFO" html="yes">Directory '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.615" endtime="20190319 12:37:26.615"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.616" level="INFO" html="yes">Path '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.615" endtime="20190319 12:37:26.616"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The directory1 is created</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.616" level="INFO">The directory1 is created</msg>
+<status status="PASS" starttime="20190319 12:37:26.616" endtime="20190319 12:37:26.616"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.614" endtime="20190319 12:37:26.616"></status>
+</kw>
+<kw name="create diretory 2" library="os">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory2}</arg>
+</arguments>
+<assign>
+<var>${directory_path}</var>
+</assign>
+<msg timestamp="20190319 12:37:26.617" level="INFO">${directory_path} = Outputs\second directory</msg>
+<status status="PASS" starttime="20190319 12:37:26.617" endtime="20190319 12:37:26.617"></status>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.618" level="INFO" html="yes">Directory '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.618" endtime="20190319 12:37:26.618"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.618" level="INFO" html="yes">Path '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.618" endtime="20190319 12:37:26.618"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The directory2 is created</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.619" level="INFO">The directory2 is created</msg>
+<status status="PASS" starttime="20190319 12:37:26.619" endtime="20190319 12:37:26.619"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.617" endtime="20190319 12:37:26.619"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.605" endtime="20190319 12:37:26.620" critical="yes"></status>
+</test>
+<test id="s1-s3-t2" name="create files">
+<kw name="create the first file" library="os">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory1}</arg>
+<arg>${file1}</arg>
+</arguments>
+<assign>
+<var>${file_path}</var>
+</assign>
+<msg timestamp="20190319 12:37:26.625" level="INFO">${file_path} = Outputs\first directory\first file.txt</msg>
+<status status="PASS" starttime="20190319 12:37:26.625" endtime="20190319 12:37:26.625"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${file_path}</arg>
+<arg>text inside file 1</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.627" level="INFO" html="yes">Created file '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\first file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\first file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20190319 12:37:26.626" endtime="20190319 12:37:26.627"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${file_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.628" level="INFO" html="yes">Path '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\first file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\first file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.627" endtime="20190319 12:37:26.628"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The file 1 is created</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.628" level="INFO">The file 1 is created</msg>
+<status status="PASS" starttime="20190319 12:37:26.628" endtime="20190319 12:37:26.628"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.625" endtime="20190319 12:37:26.628"></status>
+</kw>
+<kw name="create the file 2" library="os">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory2}</arg>
+<arg>${file2}</arg>
+</arguments>
+<assign>
+<var>${file_path}</var>
+</assign>
+<msg timestamp="20190319 12:37:26.630" level="INFO">${file_path} = Outputs\second directory\second file.txt</msg>
+<status status="PASS" starttime="20190319 12:37:26.629" endtime="20190319 12:37:26.630"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${file_path}</arg>
+<arg>text inside file 2</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.631" level="INFO" html="yes">Created file '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\second file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\second file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20190319 12:37:26.630" endtime="20190319 12:37:26.631"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${file_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.632" level="INFO" html="yes">Path '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\second file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\second file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.631" endtime="20190319 12:37:26.632"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The file 2 is created</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.632" level="INFO">The file 2 is created</msg>
+<status status="PASS" starttime="20190319 12:37:26.632" endtime="20190319 12:37:26.632"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.629" endtime="20190319 12:37:26.632"></status>
+</kw>
+<kw name="create the file 3" library="os">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory2}</arg>
+<arg>${file3}</arg>
+</arguments>
+<assign>
+<var>${file_path}</var>
+</assign>
+<msg timestamp="20190319 12:37:26.633" level="INFO">${file_path} = Outputs\second directory\third file.txt</msg>
+<status status="PASS" starttime="20190319 12:37:26.633" endtime="20190319 12:37:26.633"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${file_path}</arg>
+<arg>text inside file 3</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.635" level="INFO" html="yes">Created file '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\third file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\third file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20190319 12:37:26.634" endtime="20190319 12:37:26.635"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${file_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.636" level="INFO" html="yes">Path '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\third file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\third file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.636" endtime="20190319 12:37:26.636"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The file 3 is created</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.636" level="INFO">The file 3 is created</msg>
+<status status="PASS" starttime="20190319 12:37:26.636" endtime="20190319 12:37:26.636"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.632" endtime="20190319 12:37:26.637"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.621" endtime="20190319 12:37:26.637" critical="yes"></status>
+</test>
+<test id="s1-s3-t3" name="Moving a file">
+<kw name="Move file 3 from directory 2 to directory 1" library="os">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory2}</arg>
+<arg>${file3}</arg>
+</arguments>
+<assign>
+<var>${source_path}</var>
+</assign>
+<msg timestamp="20190319 12:37:26.642" level="INFO">${source_path} = Outputs\second directory\third file.txt</msg>
+<status status="PASS" starttime="20190319 12:37:26.641" endtime="20190319 12:37:26.642"></status>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory1}</arg>
+<arg>${file3}</arg>
+</arguments>
+<assign>
+<var>${dest_path}</var>
+</assign>
+<msg timestamp="20190319 12:37:26.643" level="INFO">${dest_path} = Outputs\first directory\third file.txt</msg>
+<status status="PASS" starttime="20190319 12:37:26.642" endtime="20190319 12:37:26.643"></status>
+</kw>
+<kw name="Move File" library="OperatingSystem">
+<doc>Moves the source file into the destination.</doc>
+<arguments>
+<arg>${source_path}</arg>
+<arg>${dest_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.647" level="INFO" html="yes">Moved file from '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\third file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\third file.txt&lt;/a&gt;' to '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\third file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\third file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20190319 12:37:26.643" endtime="20190319 12:37:26.647"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${dest_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.648" level="INFO" html="yes">Path '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\third file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\third file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.647" endtime="20190319 12:37:26.648"></status>
+</kw>
+<kw name="Should Not Exist" library="OperatingSystem">
+<doc>Fails if the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${source_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.648" level="INFO" html="yes">Path '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\third file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\third file.txt&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20190319 12:37:26.648" endtime="20190319 12:37:26.648"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The file 3 is moved to directory 1</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.649" level="INFO">The file 3 is moved to directory 1</msg>
+<status status="PASS" starttime="20190319 12:37:26.649" endtime="20190319 12:37:26.649"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.640" endtime="20190319 12:37:26.649"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.638" endtime="20190319 12:37:26.650" critical="yes"></status>
+</test>
+<test id="s1-s3-t4" name="copy a file">
+<kw name="Copy file 1 from directory 1 to directory 2" library="os">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory1}</arg>
+<arg>${file1}</arg>
+</arguments>
+<assign>
+<var>${source_path}</var>
+</assign>
+<msg timestamp="20190319 12:37:26.657" level="INFO">${source_path} = Outputs\first directory\first file.txt</msg>
+<status status="PASS" starttime="20190319 12:37:26.656" endtime="20190319 12:37:26.657"></status>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory2}</arg>
+<arg>${file1}</arg>
+</arguments>
+<assign>
+<var>${dest_path}</var>
+</assign>
+<msg timestamp="20190319 12:37:26.657" level="INFO">${dest_path} = Outputs\second directory\first file.txt</msg>
+<status status="PASS" starttime="20190319 12:37:26.657" endtime="20190319 12:37:26.657"></status>
+</kw>
+<kw name="Copy File" library="OperatingSystem">
+<doc>Copies the source file into the destination.</doc>
+<arguments>
+<arg>${source_path}</arg>
+<arg>${dest_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.663" level="INFO" html="yes">Copied file from '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\first file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\first file.txt&lt;/a&gt;' to '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\first file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\first file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20190319 12:37:26.658" endtime="20190319 12:37:26.663"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${dest_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.664" level="INFO" html="yes">Path '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\first file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\second directory\first file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.663" endtime="20190319 12:37:26.664"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${source_path}</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.664" level="INFO" html="yes">Path '&lt;a href="file://C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\first file.txt"&gt;C:\Users\ksrinivasan\PycharmProjects\SampleTest\Outputs\first directory\first file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190319 12:37:26.664" endtime="20190319 12:37:26.664"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The file 1 is successfully copied</arg>
+</arguments>
+<msg timestamp="20190319 12:37:26.665" level="INFO">The file 1 is successfully copied</msg>
+<status status="PASS" starttime="20190319 12:37:26.665" endtime="20190319 12:37:26.665"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.655" endtime="20190319 12:37:26.665"></status>
+</kw>
+<status status="PASS" starttime="20190319 12:37:26.651" endtime="20190319 12:37:26.665" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190319 12:37:26.586" endtime="20190319 12:37:26.667"></status>
+</suite>
+<status status="FAIL" starttime="20190319 12:37:24.597" endtime="20190319 12:37:26.670"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="1">Critical Tests</stat>
+<stat pass="7" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">test</stat>
+</tag>
+<suite>
+<stat pass="7" fail="1" id="s1" name="Suite level run">Suite level run</stat>
+<stat pass="0" fail="1" id="s1-s1" name="Amazon">Suite level run.Amazon</stat>
+<stat pass="3" fail="0" id="s1-s2" name="Builtin">Suite level run.Builtin</stat>
+<stat pass="4" fail="0" id="s1-s3" name="Operating System">Suite level run.Operating System</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
